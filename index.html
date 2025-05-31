@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ken Angga Praditya - Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .typed-text::after {
+      content: '|';
+      animation: blink 1s infinite;
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 1 }
+      50% { opacity: 0 }
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .fade-in.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-white font-sans">
+
+  <!-- Navbar -->
+  <nav class="flex justify-between items-center p-4 bg-white dark:bg-gray-800 shadow-md fixed w-full z-50 top-0">
+    <h1 class="text-xl font-bold text-indigo-700 dark:text-indigo-300">Ken Angga</h1>
+    <div class="space-x-4 hidden sm:block">
+      <a href="#intro" class="hover:underline">Pengenalan</a>
+      <a href="#tentang" class="hover:underline">Tentang</a>
+      <a href="#skills" class="hover:underline">Keterampilan</a>
+      <a href="#testimoni" class="hover:underline">Testimoni</a>
+      <a href="#blog" class="hover:underline">Blog</a>
+      <a href="#kontak" class="hover:underline">Kontak</a>
+    </div>
+    <button id="toggleMode" class="bg-indigo-600 dark:bg-yellow-400 text-white dark:text-black px-4 py-2 rounded">🌓</button>
+  </nav>
+
+  <!-- Header -->
+  <header id="intro" class="text-center pt-20 py-28 bg-indigo-700 dark:bg-indigo-900 text-white shadow-lg">
+    <img src="https://static.wikia.nocookie.net/valorant/images/4/47/Jett_icon.png" alt="Jett" class="w-24 h-24 mx-auto rounded-full border-4 border-white mb-4" />
+    <h2 class="text-3xl font-bold mb-2">KEN ANGGA PRADITYA</h2>
+    <p class="text-lg typed-text" id="typed"></p>
+  </header>
+
+  <!-- Pengenalan -->
+  <section class="max-w-3xl mx-auto p-6 fade-in">
+    <h2 class="text-2xl font-semibold mb-4 text-indigo-700 dark:text-indigo-400">Halo, kenalin saya Ken</h2>
+    <p class="leading-relaxed">Saya adalah seorang pengembang web yang berfokus pada desain antarmuka, frontend, dan integrasi backend. Saya senang membuat website modern dan responsif.</p>
+  </section>
+
+  <!-- Tentang -->
+  <section id="tentang" class="max-w-3xl mx-auto p-6 fade-in">
+    <h2 class="text-2xl font-semibold mb-4 text-indigo-700 dark:text-indigo-400">Tentang Saya</h2>
+    <p class="leading-relaxed">Saya menguasai berbagai teknologi web seperti HTML, TailwindCSS, JavaScript, dan backend menggunakan Node.js. Saya memiliki pengalaman mengembangkan dashboard admin, sistem top-up, dan aplikasi berbasis web lainnya.</p>
+  </section>
+
+  <!-- Keterampilan -->
+  <section id="skills" class="max-w-5xl mx-auto p-6 fade-in">
+    <h2 class="text-2xl font-semibold mb-4 text-indigo-700 dark:text-indigo-400">Keterampilan</h2>
+    <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
+      <div class="bg-white dark:bg-gray-800 rounded shadow p-4 text-center">
+        <img src="https://img.icons8.com/ios/100/frontend.png" alt="Frontend" class="mx-auto w-12 h-12 mb-2" />
+        <h3 class="font-bold text-lg">Frontend</h3>
+        <p class="text-sm">HTML, CSS, JavaScript, Tailwind</p>
+      </div>
+      <div class="bg-white dark:bg-gray-800 rounded shadow p-4 text-center">
+        <img src="https://img.icons8.com/ios/100/backend-development.png" alt="Backend" class="mx-auto w-12 h-12 mb-2" />
+        <h3 class="font-bold text-lg">Backend</h3>
+        <p class="text-sm">Node.js, Express, API Integration</p>
+      </div>
+      <div class="bg-white dark:bg-gray-800 rounded shadow p-4 text-center">
+        <img src="https://img.icons8.com/ios/100/web-design.png" alt="UI" class="mx-auto w-12 h-12 mb-2" />
+        <h3 class="font-bold text-lg">UI Designer</h3>
+        <p class="text-sm">Figma, UX Thinking, Responsive</p>
+      </div>
+      <div class="bg-white dark:bg-gray-800 rounded shadow p-4 text-center">
+        <img src="https://img.icons8.com/ios/100/idea.png" alt="Creative" class="mx-auto w-12 h-12 mb-2" />
+        <h3 class="font-bold text-lg">Creative</h3>
+        <p class="text-sm">Ide Produk, Branding Visual</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimoni -->
+  <section id="testimoni" class="max-w-4xl mx-auto p-6 fade-in">
+    <h2 class="text-2xl font-semibold mb-4 text-indigo-700 dark:text-indigo-400">Testimoni</h2>
+    <blockquote class="bg-white dark:bg-gray-800 rounded p-4 shadow italic">
+      "Ken sangat profesional dan cepat dalam pengerjaan. Websitenya rapi dan fungsional!" – <strong>Klien A</strong>
+    </blockquote>
+  </section>
+
+  <!-- Blog -->
+  <section id="blog" class="max-w-4xl mx-auto p-6 fade-in">
+    <h2 class="text-2xl font-semibold mb-4 text-indigo-700 dark:text-indigo-400">Blog</h2>
+    <div class="bg-white dark:bg-gray-800 rounded shadow p-4">
+      <h3 class="text-lg font-bold">Cara Membuat Web Modern dengan Tailwind</h3>
+      <p class="text-sm text-gray-500">Diposting 31 Mei 2025</p>
+      <p class="mt-2">TailwindCSS membuat proses styling menjadi cepat dan konsisten. Di artikel ini saya bahas praktik terbaik membuat landing page responsive.</p>
+    </div>
+  </section>
+
+  <!-- Download CV -->
+  <section class="text-center p-6 fade-in">
+    <a href="/KenAngga-CV.pdf" download class="inline-block bg-indigo-600 text-white px-6 py-3 rounded hover:bg-indigo-700">📄 Download CV</a>
+  </section>
+
+  <!-- Kontak -->
+  <section id="kontak" class="max-w-3xl mx-auto p-6 fade-in">
+    <h2 class="text-2xl font-semibold mb-4 text-indigo-700 dark:text-indigo-400">Kontak</h2>
+    <p>Email: <a href="mailto:kenangga.ken@gmail.com" class="text-blue-400 underline">kenangga.ken@gmail.com</a></p>
+    <p>WhatsApp: <a href="https://wa.me/6289683806363" class="text-blue-400 underline" target="_blank">6289683806363</a></p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center text-sm text-gray-500 dark:text-gray-400 py-6">
+    &copy; 2025 Ken Angga Praditya. Dibuat dengan ❤️ dan TailwindCSS.
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Efek Ketik
+    const typedText = ['Web Developer', 'UI Designer', 'Freelancer'];
+    let i = 0, j = 0, currentText = '', isDeleting = false;
+    function type() {
+      const el = document.getElementById('typed');
+      if (i < typedText.length) {
+        if (!isDeleting && j <= typedText[i].length) {
+          currentText = typedText[i].substring(0, j++);
+        } else if (isDeleting && j >= 0) {
+          currentText = typedText[i].substring(0, j--);
+        }
+        el.textContent = currentText;
+        if (!isDeleting && j === typedText[i].length) {
+          isDeleting = true;
+          setTimeout(type, 1000);
+        } else if (isDeleting && j === 0) {
+          isDeleting = false;
+          i = (i + 1) % typedText.length;
+          setTimeout(type, 300);
+        } else {
+          setTimeout(type, isDeleting ? 50 : 100);
+        }
+      }
+    }
+    type();
+
+    // Animasi scroll
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    // Toggle dark/light mode
+    const toggle = document.getElementById('toggleMode');
+    toggle.addEventListener('click', () => {
+      document.documentElement.classList.toggle('dark');
+    });
+  </script>
+
+</body>
+</html>
